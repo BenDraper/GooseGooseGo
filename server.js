@@ -1,11 +1,19 @@
 const express = require("express");
 const parser = require("body-parser");
+const fs = require("fs");
+const https = require("https");
+const path = require("path");
 var Filter = require('bad-words');
 
 filter = new Filter();
 
 const app = express();
 var searchTerm = "Lovely Kittens";
+
+const httpsOptions = {
+	cert: fs.readFileSync(path.join(__dirname, 'certs', 'localhost.crt')),
+	key: fs.readFileSync(path.join(__dirname, 'certs', 'localhost.key'))
+}
 
 app.set('view engine', 'pug');
 app.use(express.static(__dirname + '/public'));
@@ -37,8 +45,7 @@ app.post('/', (req, res, next) => {
 	return;
 })
 
-
-
-
-
-const server = app.listen(7000);
+https.createServer(httpsOptions, app)
+	.listen(5000, function() {
+		console.log("Server running on port 5000")
+	})
