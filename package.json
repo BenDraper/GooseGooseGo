@@ -1,0 +1,19 @@
+{
+  "name": "goosegoosego",
+  "version": "1.0.0",
+  "description": "Stupid Website For Stupid People",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ben Draper",
+  "license": "ISC",
+  "dependencies": {
+    "bad-words": "^3.0.3",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "nodemon": "^1.19.3",
+    "pug": "^2.0.4"
+  }
+}

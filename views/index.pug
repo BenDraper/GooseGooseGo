@@ -1,0 +1,17 @@
+extends default
+
+block content
+	#main
+		#top-bar.top-bar
+			a(class = 'right', href="https://www.rspb.org.uk/join-and-donate/donate/")
+				p Donate
+			a(class = 'right', href="/about")
+				p About
+		#container.container
+			img(class = 'logo', src='/images/goose.png' , alt='Goose!') 
+			#formContainer.formContainer
+				form(action='/', method='POST')
+					#form-group
+						input(class = 'search-bar', type='text', name='search', id='search', autofocus = 'autofocus')
+						button(class = 'search-button', type='submit')
+							i(class = 'fa fa-search')
