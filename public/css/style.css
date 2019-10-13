@@ -29,6 +29,16 @@
 	transform: (0%,-0%);
 }
 
+.logo{
+	max-width: 40%;
+	width: 150px;
+	height: auto;
+  	padding-bottom: 23px;
+	position: relative;
+	left: 50%;
+	transform: translate(-50%, 0%);
+}
+
 .formContainer{	
 	width: 600px;
 	max-width: 90%;
@@ -71,14 +81,4 @@
 	background-color: rgb(104,172,91);
 	border-color: rgb(104,172,91);
 	color: white;
-}
-
-.logo{
-	max-width: 25%;
-	width: 200px;
-	height: auto;
-  	padding-bottom: 23px;
-	position: relative;
-	left: 50%;
-	transform: translate(-50%, 0%);
 }
