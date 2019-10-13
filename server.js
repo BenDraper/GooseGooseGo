@@ -46,6 +46,6 @@ app.post('/', (req, res, next) => {
 })
 
 https.createServer(httpsOptions, app)
-	.listen(5000, function() {
-		console.log("Server running on port 5000")
+	.listen(443, function() {
+		console.log("Server running on port 443")
 	})
