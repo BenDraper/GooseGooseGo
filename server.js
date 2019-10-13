@@ -40,7 +40,9 @@ app.post('/', (req, res, next) => {
 	}
 
 	var redirectString = "https://duckduckgo.com/?q=" + searchTerm + "&t=h_&search_plus_one=form&ia=web";
-	searchTerm = req.body.search.replace(" ", "+");
+	if(req.body.search != ""){
+		searchTerm = req.body.search.replace(" ", "+");
+	}
 	res.redirect(redirectString);
 	return;
 })
