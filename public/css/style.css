@@ -57,6 +57,8 @@
 	border-color: rgb(217,217,217);
 	border-style: solid hidden solid solid;
 	vertical-align: middle;
+	font-weight: 300;
+	font-size: 20px;
 }
 .search-bar:focus{
 	outline: none;
